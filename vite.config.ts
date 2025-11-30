@@ -4,10 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
-    // Use a relative base so the site works when served from GitHub Pages
-    // (works for user pages and project pages). If you prefer a fixed
-    // base (e.g. '/gotakoyaki/'), set that instead.
-    base: './',
+    base: './gotakoyaki/',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
