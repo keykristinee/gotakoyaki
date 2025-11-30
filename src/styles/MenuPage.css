@@ -1,0 +1,272 @@
+/* --- Grid Layout --- */
+.menu-grid-pop {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Large gaps to prevent the giant boxes from hitting each other */
+  column-gap: 3rem; 
+  row-gap: 8rem; 
+  /* Push the whole grid down to accommodate the first row popping up */
+  padding-top: 6rem; 
+  padding-bottom: 2rem;
+}
+
+.hero-script-title {
+  font-family: 'Avallon', cursive; 
+  font-size: 6rem; 
+  line-height: 1.1;
+  color: #FBD612; 
+  transform: rotate(-2deg);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.menu-script-title {
+  font-family: 'Avallon', cursive; /* The custom font you added */
+  font-size: 5rem; 
+  line-height: 1.1;
+  color: #70080B; 
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .menu-grid-pop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-grid-pop {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Card Wrappers --- */
+.menu-card-wrapper {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+/* The White Card (Now smaller/shrunk) */
+.menu-card-bg {
+  background: #fff;
+  border-radius: 1.5rem;
+  overflow: visible; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  
+  /* CRITICAL CHANGE: Shrinking the card */
+  margin-left: 1.5rem;  /* Push in from left */
+  margin-right: 1.5rem; /* Push in from right */
+  margin-top: 2rem;     /* Push down (makes it look shorter) */
+  
+  transition: transform 0.3s ease;
+}
+
+.menu-card-wrapper:hover .menu-card-bg {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(112, 8, 11, 0.15);
+}
+
+/* --- The GIANT Image --- */
+.menu-image-pop-wrapper {
+  /* This makes the image wider than the card */
+  width: 140%; 
+  /* Center the image relative to the now-smaller card */
+  margin-left: -20%; 
+  
+  /* Pull the image Way UP */
+  margin-top: -110px; 
+  
+  height: 260px; /* Fixed height */
+  position: relative;
+  z-index: 10;
+  
+  /* Deep shadow creates the "floating" illusion */
+  filter: drop-shadow(0 20px 20px rgba(0,0,0,0.2));
+  transition: transform 0.3s ease;
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Aligns image to bottom of this wrapper */
+}
+
+/* Float effect */
+.menu-card-wrapper:hover .menu-image-pop-wrapper {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.menu-image-pop {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.menu-badge-pop {
+  position: absolute;
+  top: 330px;          /* Positioned lower down, near the bottom of the image */
+  right: -10px;        /* Hanging off the right edge */
+  left: auto;
+  
+  background: linear-gradient(135deg, #FBD612, #f5c000);
+  color: #70080B;
+  
+  font-weight: 900;    /* Extra bold */
+  font-size: 0.9rem;
+  padding: 1.2rem 0.8rem; /* Taller padding creates a circle/seal look */
+  border-radius: 50%;     /* Makes it a perfect circle */
+  width: 70px;            /* Fixed width */
+  height: 70px;           /* Fixed height */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+  
+  z-index: 20;
+  box-shadow: 0 4px 15px rgba(112, 8, 11, 0.3);
+  transform: rotate(15deg);
+}
+
+/* --- Content Styling --- */
+.menu-content-pop {
+  padding: 0 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  text-align: center;
+  /* Push text down so it doesn't get covered by the image shadow */
+  margin-top: 0.5rem; 
+}
+
+.menu-text-group {
+    margin-bottom: 1.2rem;
+}
+
+.menu-title-pop {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #70080B;
+  margin-bottom: 0.4rem;
+}
+
+.menu-desc-pop {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Footer Text --- */
+.menu-footer-text {
+  margin-top: auto;
+  padding-top: 0.8rem;
+  border-top: 2px dashed #FBD612;
+  color: #70080B;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.anatomy-script-title {
+  font-family: 'Avallon', cursive; /* The custom font you added */
+  font-size: 5rem; 
+  line-height: 1.1;
+  color: #70080B; 
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  margin: 0;
+}
+
+.simple-header {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.text-red { color: #70080B; }
+.text-gold { color: #dcb315; } /* Slightly darker gold for readability on white */
+
+/* List Styling */
+.simple-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.simple-list li {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.1rem;
+  color: #444; /* Softer black */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Dots */
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot-red { background-color: #70080B; }
+.dot-gold { background-color: #FBD612; }
+
+/* Alignment Logic */
+/* Desktop: Push text towards the center image */
+@media (min-width: 1024px) {
+  .col-left {
+    text-align: right;
+    align-items: flex-end;
+  }
+  .col-left .simple-list li {
+    justify-content: flex-end; /* Align list items to right */
+  }
+
+  .col-right {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .col-right .simple-list li {
+    justify-content: flex-start; /* Align list items to left */
+  }
+}
+
+/* Mobile: Center everything */
+@media (max-width: 1023px) {
+  .ingredient-col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* On mobile, put the dot always on the left for readability */
+  .simple-list li {
+    justify-content: center;
+    flex-direction: row-reverse; /* Keep dot on left for both lists on mobile */
+  }
+  /* Fix for the left list on mobile to match */
+  .col-left .simple-list li {
+    flex-direction: row;
+  }
+}

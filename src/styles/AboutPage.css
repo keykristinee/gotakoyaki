@@ -1,0 +1,449 @@
+/* General Layout */
+.hero-blur { filter: blur(3px); transform: scale(1.05); object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: rgba(112, 8, 11, 0.7); mix-blend-mode: multiply; }
+
+.hero-script-title {
+  font-family: 'Avallon', cursive; 
+  font-size: 6rem; 
+  line-height: 1.1;
+  color: #FBD612; 
+  transform: rotate(-2deg);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* --- Story Section --- */
+.story-section {
+  padding: 6rem 0;
+  background-color: #FFFDF8; /* Warm off-white */
+  overflow: hidden;
+}
+
+.story-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* Space between stories */
+}
+
+/* --- The Central Line --- */
+.timeline-track {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  /* Dashed Yellow Line */
+  background: repeating-linear-gradient(
+    to bottom,
+    #FBD612,
+    #FBD612 12px,
+    transparent 12px,
+    transparent 24px
+  ); 
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* --- The Row Layout --- */
+.story-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.story-content, .story-visual {
+  width: 45%; /* Split width */
+  display: flex;
+}
+
+/* --- Alternating Logic --- */
+/* Even rows: Text Left, Image Right */
+.story-content { justify-content: flex-end; padding-right: 3.5rem; text-align: right; }
+.story-visual { justify-content: flex-start; padding-left: 3.5rem; }
+
+/* Odd rows: Flip them (Image Left, Text Right) */
+.story-row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.story-row:nth-child(even) .story-content {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 3.5rem;
+  text-align: left;
+}
+.story-row:nth-child(even) .story-visual {
+  justify-content: flex-end;
+  padding-left: 0;
+  padding-right: 3.5rem;
+}
+
+/* --- The Center Marker (Red Dot) --- */
+.story-marker {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marker-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #70080B;
+  border: 4px solid #FFF;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #FBD612;
+}
+
+/* --- The Text Card --- */
+.story-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(112, 8, 11, 0.08);
+  border: 1px solid rgba(112, 8, 11, 0.05);
+  max-width: 480px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Red Top Border for Card */
+.story-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: #70080B;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.story-tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FBD612;
+  background: #70080B;
+  padding: 0.3rem 0.9rem;
+  border-radius: 2rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.story-title {
+  font-family: 'Avallon', cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #2D1B13;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.story-desc {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* --- The Polaroid Frame --- */
+.polaroid-frame {
+  background-color: #fff;
+  /* Classic Polaroid Padding: Equal sides, BIG bottom */
+  padding: 15px 15px 70px 15px; 
+  box-shadow: 
+    0 4px 10px rgba(0,0,0,0.05), 
+    0 15px 35px rgba(0,0,0,0.15);
+  position: relative;
+  transition: all 0.4s ease;
+  width: 340px;
+  transform-origin: center top;
+  border: 1px solid #eee;
+}
+
+.polaroid-frame:hover {
+  transform: scale(1.05) rotate(0deg) !important; /* Straighten on hover */
+  z-index: 10;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* Rotation Variations */
+.rotate-left { transform: rotate(-3deg); }
+.rotate-right { transform: rotate(3deg); }
+
+.polaroid-inner {
+  width: 100%;
+  height: 280px; /* Fixed height for image area */
+  background: #333;
+  overflow: hidden;
+  /* Slight sepia for nostalgic feel */
+  filter: sepia(10%) contrast(1.05); 
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- The Tape Effect --- */
+.tape-strip {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 110px;
+  height: 35px;
+  /* Semi-transparent white */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-left: 1px dashed rgba(0,0,0,0.1);
+  border-right: 1px dashed rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  backdrop-filter: blur(3px); /* Frosted tape look */
+  opacity: 0.8;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+  .timeline-track { left: 20px; } /* Move line to left side */
+  
+  .story-row, .story-row:nth-child(even) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 3.5rem; /* Make space for left line */
+    margin-bottom: 3rem;
+  }
+
+  .story-content, .story-visual, 
+  .story-row:nth-child(even) .story-content, 
+  .story-row:nth-child(even) .story-visual {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .story-marker {
+    position: absolute;
+    left: 10px; /* Align with left line */
+    top: 0;
+    width: auto;
+  }
+
+  .story-visual {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .polaroid-frame {
+    transform: rotate(2deg); /* Simple rotation for all on mobile */
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.values-special-font {
+  font-family: 'Avallon', cursive; /* The custom font you added */
+  font-size: 5rem; 
+  line-height: 1.1;
+  color: #70080B; 
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  margin: 0;
+}
+
+.franchising-special-font {
+  font-family: 'Avallon', cursive; /* The custom font you added */
+  font-size: 5rem; 
+  line-height: 1.1;
+  color: #FBD612; 
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  margin: 0;
+}
+
+/* Optional: If you want a handwriting font for the title */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.font-handwriting {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 1px;
+}
+
+.franchise-section-themed {
+  position: relative;
+  padding: 6rem 0;
+  /* Brand Red Background */
+  background-color: #4a0204; 
+  overflow: hidden;
+  /* Top border to separate from white section */
+  border-top: 8px solid #FBD612; 
+}
+
+/* Subtle Japanese Wave Pattern on Red */
+.franchise-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1zM1 5h2v2H1V5zm4 0h2v2H5V5zm4 0h2v2H9V5zM1 9h2v2H1V9zm4 0h2v2H5V9zm4 0h2v2H9V9z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Highlight Box styling */
+.franchise-highlight-box {
+  background: rgba(0, 0, 0, 0.2);
+  border-left: 4px solid #FBD612;
+  padding: 1.5rem;
+  border-radius: 0 1rem 1rem 0;
+  margin-top: 1.5rem;
+}
+
+/* --- TICKET BUTTON --- */
+.franchise-ticket-btn {
+  background-color: #FBD612;
+  color: #70080B;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 
+    0 4px 0 #d4b20a, /* 3D bottom lip */
+    0 10px 20px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.franchise-ticket-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 
+    0 2px 0 #d4b20a,
+    0 5px 10px rgba(0,0,0,0.2);
+}
+
+.franchise-ticket-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* --- PHOTO STACK LAYOUT --- */
+.franchise-photo {
+  background: #fff;
+  padding: 10px 10px 40px 10px; /* Polaroid spacing */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+  width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.franchise-photo:hover {
+  transform: scale(1.05) rotate(0deg) !important;
+  z-index: 30;
+}
+
+.photo-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #eee; /* Placeholder color */
+  border: 1px solid #ddd;
+}
+
+.photo-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+  color: #333;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Positioning the photos */
+.photo-1 {
+  transform: rotate(3deg) translateX(20px); 
+  z-index: 10;
+  /* Add positive margin to push the next element down */
+  margin-bottom: 2rem; 
+}
+
+/* Bottom Photo (Full Store) - Leans Left */
+.photo-2 {
+  /* Removed the negative translateY that was pulling it up */
+  transform: rotate(-4deg) translateX(-40px); 
+  z-index: 20;
+}
+
+/* --- TAPE EFFECTS --- */
+.tape-corner {
+  position: absolute;
+  top: -15px;
+  right: 30%;
+  width: 80px;
+  height: 30px;
+  background: rgba(255,255,255,0.3);
+  transform: rotate(-25deg);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.tape-center {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 30px;
+  background: rgba(255,255,255,0.3);
+  border-left: 1px dashed rgba(0,0,0,0.1);
+  border-right: 1px dashed rgba(0,0,0,0.1);
+  backdrop-filter: blur(2px);
+}
+
+/* Animation */
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Mobile Adjustment: Stack them neatly */
+@media (max-width: 1024px) {
+  .photo-1 { 
+    transform: rotate(2deg); 
+    margin-bottom: 2rem; /* Space between them on mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .photo-2 { 
+    transform: rotate(-2deg); 
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-script-title {
+    font-size: 4rem;
+  }
+}

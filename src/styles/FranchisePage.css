@@ -1,0 +1,289 @@
+.hero-script-title {
+  font-family: 'Avallon', cursive; 
+  font-size: 6rem; 
+  line-height: 1.1;
+  color: #FBD612; 
+  transform: rotate(-2deg);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero-badge-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FBD612;
+  color: #70080B;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-desc-modern {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.content-script-title {
+  font-family: 'Avallon', cursive; /* The custom font you added */
+  font-size: 5rem; 
+  line-height: 1.1;
+  color: #70080B; 
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  margin: 0;
+}
+
+/* FranchisePage specific styles */
+.franchise-section {
+  background: #FFF8E7;
+  padding: 5rem 0;
+}
+.franchise-title {
+  color: #70080B;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.franchise-details {
+  color: #444;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* =========================================
+   STATS BANNER REDESIGN (THIN VERSION)
+========================================= */
+
+.stats-banner-section {
+  position: relative;
+  /* Reduced padding to make it thinner */
+  padding: 3rem 0; 
+  background-color: #70080B;
+  overflow: visible; /* Keeps the kiosk visible outside the box */
+  margin-top: 4rem; /* Added margin so the kiosk doesn't cover previous text */
+  border-top: 4px solid #FBD612;
+  border-bottom: 4px solid #FBD612;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Subtle Japanese Pattern Overlay */
+.stats-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1zM1 5h2v2H1V5zm4 0h2v2H5V5zm4 0h2v2H9V5zM1 9h2v2H1V9zm4 0h2v2H5V9zm4 0h2v2H9V9z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* --- Kiosk Positioning --- */
+.kiosk-wrapper {
+  position: absolute;
+  left: 5%;
+  /* Center vertically relative to the banner */
+  top: 50%; 
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 500px;
+}
+
+.kiosk-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
+  position: relative;
+  z-index: 2;
+  /* Optional: Scale it up slightly if you want it to pop out even more */
+  transform: scale(1.1); 
+}
+
+/* The Glow behind the kiosk */
+.kiosk-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: #FBD612;
+  opacity: 0.25;
+  filter: blur(60px);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* --- Stats Content --- */
+.stats-content-container {
+  width: 100%;
+  padding-left: 450px; 
+  padding-right: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon-wrapper {
+  color: #FBD612;
+  background: rgba(251, 214, 18, 0.1);
+  padding: 10px; /* Slightly smaller padding for thinner look */
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(251, 214, 18, 0.3);
+}
+
+.stat-number {
+  font-size: 3rem; /* Slightly smaller font to fit thinner banner */
+  font-weight: 800;
+  color: #FBD612;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .stats-banner-section {
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .kiosk-wrapper {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin: 0 auto 2rem auto;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .kiosk-img {
+    transform: none;
+    margin-bottom: -1.5rem; 
+  }
+
+  .stats-content-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .stat-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.btn-hero-primary {
+  background: linear-gradient(135deg, #FBD612 0%, #dcb315 100%);
+  color: #70080B;
+  font-weight: 800;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem; /* Soft square looks more modern than full pill */
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 
+    0 4px 0 #bfa013, /* 3D Lip */
+    0 10px 20px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+  justify-content: center;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(2px);
+  box-shadow: 
+    0 2px 0 #bfa013,
+    0 5px 10px rgba(0,0,0,0.3);
+  filter: brightness(1.1);
+}
+
+/* --- Step Card Styling --- */
+.step-card {
+  position: relative;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center; 
+}
+
+.step-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.step-number-badge {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: #FBD612;
+  color: #70080B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.125rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.step-title {
+  color: #70080B;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* --- Desktop Adjustments (min-width: 768px) --- */
+@media (min-width: 768px) {
+  .step-card {
+    text-align: left; /* Align text back to left */
+  }
+
+  .step-number-badge {
+    left: -1rem; /* Hang off the left edge */
+    transform: translateX(0); /* Reset centering transform */
+  }
+}
+

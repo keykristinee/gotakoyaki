@@ -1,0 +1,369 @@
+/* =================================
+   1. HERO SECTION (Restored)
+================================= */
+.hero-blur { 
+  filter: blur(3px); 
+  transform: scale(1.05); 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay { 
+  position: absolute; 
+  inset: 0; 
+  background: rgba(112, 8, 11, 0.6); 
+  mix-blend-mode: multiply; 
+}
+
+.hero-badge-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #70080B;
+  color: #FBD612;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* 2. Massive Title */
+.hero-title-modern {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 800;
+  font-size: 4rem; /* Bigger for impact */
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+  .hero-title-modern { font-size: 3rem; }
+}
+
+/* 3. Highlighted Text Effect */
+.text-highlight-gold {
+  color: #FBD612;
+  position: relative;
+  display: inline-block;
+}
+
+.text-change-gold {
+  font-family: 'Avallon', cursive;
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 1.1;
+  color: #FBD612;
+  position: relative;
+  display: inline-block;
+}
+
+/* Optional: A subtle underline marker effect */
+.text-highlight-gold::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: rgba(112, 8, 11, 0.6); /* Dark Red Marker */
+  z-index: -1;
+  transform: skewX(-10deg) rotate(-1deg);
+}
+
+/* 4. Description Text */
+.hero-desc-modern {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  max-width: 90%;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- HERO BUTTONS REDESIGN --- */
+
+.hero-btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Primary Button (Gold Gradient) */
+.btn-hero-primary {
+  background: linear-gradient(135deg, #FBD612 0%, #dcb315 100%);
+  color: #70080B;
+  font-weight: 800;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem; /* Soft square looks more modern than full pill */
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 
+    0 4px 0 #bfa013, /* 3D Lip */
+    0 10px 20px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-hero-primary:hover {
+  transform: translateY(2px);
+  box-shadow: 
+    0 2px 0 #bfa013,
+    0 5px 10px rgba(0,0,0,0.3);
+  filter: brightness(1.1);
+}
+
+/* Secondary Button (Frosted Glass) */
+.btn-hero-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* =================================
+   2. FEATURES SECTION (Premium)
+================================= */
+
+.feature-script-title {
+  font-family: 'Avallon', cursive; /* The custom font you added */
+  font-size: 5rem; 
+  line-height: 1.1;
+  color: #70080B; 
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  margin: 0;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(112, 8, 11, 0.1);
+  border-color: rgba(112, 8, 11, 0.1);
+}
+
+/* Top Border Accent */
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: #FBD612;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background-color: #70080B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 10px 20px rgba(112, 8, 11, 0.2);
+  border: 4px solid #fff;
+  outline: 2px solid #FBD612;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #70080B;
+  margin-bottom: 1rem;
+}
+
+.feature-desc {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* =================================
+   3. SLIDER SECTION (Smooth Slide Animation)
+================================= */
+
+.photo-banner-slider {
+  width: 100%;
+  height: 400px; /* Fixed height container */
+  overflow: hidden; /* Hides the images that are "off-screen" */
+  position: relative;
+  background: #FFF8E7;
+}
+
+.photo-banner-slider-track {
+  display: flex; /* Lines images up horizontally */
+  width: 100%;
+  height: 100%;
+  
+  /* The magic part: Smoothly animates the transform property */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+.photo-banner-img {
+  min-width: 100%; /* Force each image to take full width of container */
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  /* Removed absolute positioning so they stack side-by-side */
+}
+
+/* Dots Styling (Unchanged mostly) */
+.photo-banner-slider-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.photo-banner-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.photo-banner-dot.active {
+  background: #FBD612;
+  border-color: #FBD612;
+  transform: scale(1.2); /* Slight pop when active */
+}
+
+/* =================================
+   4. TESTIMONIALS SECTION (Premium)
+================================= */
+.testimonials-script-title {
+  font-family: 'Avallon', cursive; /* The custom font you added */
+  font-size: 5rem; 
+  line-height: 1.1;
+  color: #70080B; 
+  transform: rotate(-2deg);
+  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  margin: 0;
+}
+
+.home-testimonials-section {
+  background: #FFFDF8;
+  padding: 6rem 0;
+}
+
+.testimonial-bubble {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  position: relative;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
+  display: flex;          
+  flex-direction: column;  
+  height: 100%;           
+  justify-content: space-between;
+}
+
+.testimonial-bubble:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(112, 8, 11, 0.1);
+}
+
+/* Speech bubble tail */
+.testimonial-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 2rem;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.testimonial-quote-icon {
+  color: #FBD612;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .hero-title-modern { 
+    /* 1. Reduce font size so the long line fits */
+    font-size: 2.2rem; 
+    line-height: 1.2;
+  }
+
+  /* 2. Target the gold span and force it to one line */
+  .hero-title-modern .text-highlight-gold {
+    white-space: nowrap;
+    display: inline-block; /* Ensures the transform/underline effects stay intact */
+    width: 100%; /* Ensures it takes up the container width */
+  }
+  
+}

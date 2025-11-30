@@ -1,0 +1,304 @@
+.location-hero {
+  position: relative;
+  background: 
+    linear-gradient(to right, rgba(112, 8, 11, 0.9), rgba(138, 10, 14, 0.8)),
+    url('/location_bg.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.hero-blur { 
+  filter: blur(3px); 
+  transform: scale(1.05); 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-script-title {
+  font-family: 'Avallon', cursive; 
+  font-size: 6rem; 
+  line-height: 1.1;
+  color: #FBD612; 
+  transform: rotate(-2deg);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.content-script-title {
+  font-family: 'Avallon', cursive; 
+  font-size: 4rem; 
+  line-height: 1.1;
+  color: #70080b; 
+  transform: rotate(-2deg);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* Side-by-side layout for hours and branches */
+.hours-branches-section {
+  padding: 5rem 0;
+}
+.hours-branches-flex {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+.branches-side {
+  min-width: 340px;
+  max-width: 400px;
+  flex: 1;
+}
+@media (max-width: 1024px) {
+  .hours-branches-flex {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .branches-side {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+/* Branch sections */
+/* --- Branch Sections --- */
+.branch-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.branch-title {
+  font-size: 2.5rem; /* Matched size to Hours title */
+  color: #70080b;
+  margin-bottom: 0.5rem;
+}
+.branch-text {
+  color: #4b5563;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+/* NEW GRID CONTAINER */
+.branch-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default (mobile) */
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.branch-card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px -8px rgba(0,0,0,0.12);
+  padding: 2rem;
+  width: 100%;
+  border-top: 4px solid #fbd612;
+  
+  /* FLEXBOX to push content evenly */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  height: 100%; /* Forces it to fill the grid cell height */
+  min-height: 140px; /* Ensures a minimum visual size */
+}
+
+.branch-card--new {
+  border-top-color: #4caf50;
+}
+.branch-card--upcoming {
+  border-top-color: #fbd612;
+}
+
+.branch-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.branch-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 60px;
+  text-align: center;
+}
+.branch-badge--new {
+  background: #e6f4ea; /* Softer green bg */
+  color: #1e7e34;
+}
+.branch-badge--upcoming {
+  background: #fff8e1; /* Softer yellow bg */
+  color: #b45309;
+}
+
+.branch-location {
+  font-size: 1.1rem;
+  color: #70080b;
+  font-weight: 700;
+}
+
+.branch-address-wrapper {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  padding-left: 0.2rem; /* Align with text above */
+}
+
+/* Layout wrappers */
+.location-page {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.location-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero */
+.location-hero {
+  background: linear-gradient(to right, #70080b, #8a0a0e);
+  color: #ffffff;
+  padding: 5rem 0;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 5vw, 3.75rem);
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 48rem;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hours section */
+.hours-section {
+  padding: 5rem 0;
+}
+
+.hours-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hours-badge {
+  display: inline-block;
+  background-color: #fbd612;
+  color: #70080b;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+.hours-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #70080b;
+  width: 100%;
+}
+
+.hours-card {
+  max-width: 32rem;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border-top: 4px solid #fbd612;
+}
+
+.hours-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hours-icon {
+  background-color: #70080b;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  color: #fbd612;
+  display: inline-flex;
+}
+
+.hours-text {
+  color: #4b5563;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hours-item--weekend {
+  background-color: #fff8e7;
+  margin: 0 -1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.hours-item-day {
+  color: #70080b;
+}
+
+.hours-item-hours {
+  color: #374151;
+}
+
+.hours-note {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fff8e7;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.hours-note span {
+  color: #70080b;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hours-card {
+    padding: 1.5rem;
+  }
+
+  .map-card {
+    height: 380px;
+  }
+
+  .restaurant-image {
+    height: 320px;
+  }
+}
+
