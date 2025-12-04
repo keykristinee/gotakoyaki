@@ -7,6 +7,7 @@ import LocationPage from './components/LocationPage';
 import FranchisePage from './components/FranchisePage';
 import Footer from './components/Footer';
 import './styles/globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
