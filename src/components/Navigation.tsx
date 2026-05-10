@@ -25,6 +25,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
         <div className="nav-content">
           
           {/* Logo */}
+          <div className="nav-brand-group">
           <button
             onClick={() => onNavigate('home')}
             className="nav-logo-btn"
@@ -37,6 +38,13 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             />
           </button>
 
+          <img
+            src="/logotext.png"
+            alt="Go Takoyaki Text"
+            className="nav-logotext-img"
+          />
+          </div>
+          
           {/* Desktop Navigation */}
           <div className="nav-links-desktop">
             {navItems.map((item) => (

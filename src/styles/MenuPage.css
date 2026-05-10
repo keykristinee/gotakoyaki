@@ -1,3 +1,12 @@
+
+:root {
+  --nav-red: #E01F27;
+  --nav-gold: #FDBA19;
+  --nav-brown: #502811;
+  --nav-white: #f4efe5;
+  --nav-mayo: #FBE498;
+}
+
 /* --- Grid Layout --- */
 .menu-grid-pop {
   display: grid;
@@ -14,7 +23,7 @@
   font-family: 'Avallon', cursive; 
   font-size: 6rem; 
   line-height: 1.1;
-  color: #FBD612; 
+  color: #FDBA19; 
   transform: rotate(-2deg);
   text-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
@@ -23,9 +32,9 @@
   font-family: 'Avallon', cursive; /* The custom font you added */
   font-size: 5rem; 
   line-height: 1.1;
-  color: #70080B; 
+  color: var(--nav-brown); 
   transform: rotate(-2deg);
-  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  text-shadow: 2px 2px 0px rgba(253, 186, 25, 0.3);
   margin: 0;
 }
 
@@ -50,7 +59,7 @@
 
 /* The White Card (Now smaller/shrunk) */
 .menu-card-bg {
-  background: #fff;
+  background: #ffff;
   border-radius: 1.5rem;
   overflow: visible; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -59,18 +68,15 @@
   flex-direction: column;
   position: relative;
   height: 100%;
-  
-  /* CRITICAL CHANGE: Shrinking the card */
-  margin-left: 1.5rem;  /* Push in from left */
-  margin-right: 1.5rem; /* Push in from right */
-  margin-top: 2rem;     /* Push down (makes it look shorter) */
-  
+  margin-left: 1.5rem; 
+  margin-right: 1.5rem;
+  margin-top: 2rem;
   transition: transform 0.3s ease;
 }
 
 .menu-card-wrapper:hover .menu-card-bg {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(112, 8, 11, 0.15);
+  box-shadow: 0 20px 40px rgba(224, 31, 39, 0.15);
 }
 
 /* --- The GIANT Image --- */
@@ -113,8 +119,8 @@
   right: -10px;        /* Hanging off the right edge */
   left: auto;
   
-  background: linear-gradient(135deg, #FBD612, #f5c000);
-  color: #70080B;
+  background: var(--nav-brown);
+  color: var(--nav-mayo);
   
   font-weight: 900;    /* Extra bold */
   font-size: 0.9rem;
@@ -130,7 +136,7 @@
   line-height: 1.1;
   
   z-index: 20;
-  box-shadow: 0 4px 15px rgba(112, 8, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(224, 31, 39, 0.3);
   transform: rotate(15deg);
 }
 
@@ -154,13 +160,13 @@
   font-family: 'Segoe UI', 'Arial', sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
-  color: #70080B;
+  color: var(--nav-gold);
   margin-bottom: 0.4rem;
 }
 
 .menu-desc-pop {
   font-family: 'Segoe UI', 'Arial', sans-serif;
-  color: #666;
+  color: var(--nav-brown);
   font-size: 0.9rem;
   line-height: 1.4;
   display: -webkit-box;
@@ -173,8 +179,8 @@
 .menu-footer-text {
   margin-top: auto;
   padding-top: 0.8rem;
-  border-top: 2px dashed #FBD612;
-  color: #70080B;
+  border-top: 2px dashed var(--nav-brown);
+  color: var(--nav-brown);
   font-weight: 700;
   font-size: 0.85rem;
 }
@@ -183,9 +189,9 @@
   font-family: 'Avallon', cursive; /* The custom font you added */
   font-size: 5rem; 
   line-height: 1.1;
-  color: #70080B; 
+  color: var(--nav-brown); 
   transform: rotate(-2deg);
-  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  text-shadow: 2px 2px 0px rgba(253, 186, 25, 0.3);
   margin: 0;
 }
 
@@ -198,8 +204,8 @@
   margin-bottom: 1.5rem;
 }
 
-.text-red { color: #70080B; }
-.text-gold { color: #dcb315; } /* Slightly darker gold for readability on white */
+.text-red { color: var(--nav-red); }
+.text-gold { color: var(--nav-gold); } /* Slightly darker gold for readability on white */
 
 /* List Styling */
 .simple-list {
@@ -228,8 +234,8 @@
   border-radius: 50%;
   flex-shrink: 0;
 }
-.dot-red { background-color: #70080B; }
-.dot-gold { background-color: #FBD612; }
+.dot-red { background-color: #E01F27; }
+.dot-gold { background-color: #FDBA19; }
 
 /* Alignment Logic */
 /* Desktop: Push text towards the center image */

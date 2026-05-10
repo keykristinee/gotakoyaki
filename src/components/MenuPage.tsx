@@ -1,6 +1,6 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Badge } from './ui/badge';
 import { Flame, Layers, Sparkles } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 import '../styles/MenuPage.css';
 
 export default function MenuPage() {
@@ -86,7 +86,7 @@ export default function MenuPage() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="menu-script-title mb-2">The Best of the Best</h2>
-            <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+            <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Our takoyaki cheesebombs are made fresh with premium ingredients.
             </p>
@@ -141,7 +141,7 @@ export default function MenuPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="anatomy-script-title mb-2">What Goes Inside?</h2>
-            <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+            <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
              <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Crispy on the outside, creamy on the inside, and packed with flavor. Discover 7 fillings and 8 toppings that go into crafting the ultimate Takoyaki cheesebombs.
             </p>
@@ -166,7 +166,7 @@ export default function MenuPage() {
             <div className="flex justify-center order-first lg:order-none mb-8 lg:mb-0">
               <div className="relative w-[280px] lg:w-[350px]">
                 {/* Simple circle bg */}
-                <div className="absolute inset-0 bg-[#FBD612]/10 rounded-full scale-90"></div>
+                <div className="absolute inset-0 bg-[#FDBA19]/10 rounded-full scale-90"></div>
                 <img 
                   src="/anatomy.png" 
                   alt="Takoyaki Ingredients" 

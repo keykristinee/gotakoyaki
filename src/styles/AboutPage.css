@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+  --nav-red: #E01F27;
+  --nav-gold: #FDBA19;
+  --nav-brown: #502811;
+  --nav-white: #f4efe5;
+  --nav-mayo: #FBE498;
+  --nav-hover-red: #8a0a0e;
+}
+
 /* General Layout */
 .hero-blur { filter: blur(3px); transform: scale(1.05); object-fit: cover; }
-.hero-overlay { position: absolute; inset: 0; background: rgba(112, 8, 11, 0.7); mix-blend-mode: multiply; }
+.hero-overlay { position: absolute; inset: 0; background: rgba(224, 31, 39, 0.7); mix-blend-mode: multiply; }
 
 .hero-script-title {
   font-family: 'Avallon', cursive; 
   font-size: 6rem; 
   line-height: 1.1;
-  color: #FBD612; 
+  color: #FDBA19; 
   transform: rotate(-2deg);
   text-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
@@ -35,8 +46,8 @@
   /* Dashed Yellow Line */
   background: repeating-linear-gradient(
     to bottom,
-    #FBD612,
-    #FBD612 12px,
+    #FDBA19,
+    #FDBA19 12px,
     transparent 12px,
     transparent 24px
   ); 
@@ -90,10 +101,10 @@
 .marker-dot {
   width: 20px;
   height: 20px;
-  background-color: #70080B;
+  background-color: #E01F27;
   border: 4px solid #FFF;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px #FBD612;
+  box-shadow: 0 0 0 2px #FDBA19;
 }
 
 /* --- The Text Card --- */
@@ -101,8 +112,8 @@
   background: #fff;
   padding: 2.5rem;
   border-radius: 1.5rem;
-  box-shadow: 0 10px 30px rgba(112, 8, 11, 0.08);
-  border: 1px solid rgba(112, 8, 11, 0.05);
+  box-shadow: 0 10px 30px rgba(224, 31, 39, 0.08);
+  border: 1px solid rgba(224, 31, 39, 0.05);
   max-width: 480px;
   position: relative;
   transition: transform 0.3s ease;
@@ -118,7 +129,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 6px;
-  background: #70080B;
+  background: var(--nav-brown);
   border-radius: 1.5rem 1.5rem 0 0;
 }
 
@@ -126,8 +137,8 @@
   display: inline-block;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #FBD612;
-  background: #70080B;
+  color: var(--nav-mayo);
+  background: var(--nav-brown);
   padding: 0.3rem 0.9rem;
   border-radius: 2rem;
   margin-bottom: 1.2rem;
@@ -139,9 +150,10 @@
   font-family: 'Avallon', cursive;
   font-size: 2.5rem;
   font-weight: 400;
-  color: #2D1B13;
+  color: var(--nav-gold);
   margin-bottom: 1rem;
   line-height: 1.1;
+  text-shadow: 2px 2px 0px var(--nav-mayo);
 }
 
 .story-desc {
@@ -198,7 +210,6 @@
   transform: translateX(-50%) rotate(-1deg);
   width: 110px;
   height: 35px;
-  /* Semi-transparent white */
   background-color: rgba(255, 255, 255, 0.4);
   border-left: 1px dashed rgba(0,0,0,0.1);
   border-right: 1px dashed rgba(0,0,0,0.1);
@@ -256,24 +267,42 @@
   font-family: 'Avallon', cursive; /* The custom font you added */
   font-size: 5rem; 
   line-height: 1.1;
-  color: #70080B; 
+  color: var(--nav-brown); 
   transform: rotate(-2deg);
-  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  text-shadow: 2px 2px 0px rgba(253, 186, 25, 0.3);
   margin: 0;
+}
+
+.values-title{
+  color: var(--nav-brown);
+  font-weight: 600;
+  font-size: larger;
+  margin-bottom: 2px;
+}
+
+.values-icon{
+  background-color: var(--nav-brown);
+  width: 5rem;          /* w-20 */
+  height: 5rem;         /* h-20 */
+  border-radius: 9999px; /* rounded-full */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;    /* mx-auto */
+  margin-right: auto;   /* mx-auto */
+  margin-bottom: 1.5rem; /* mb-6 */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .franchising-special-font {
   font-family: 'Avallon', cursive; /* The custom font you added */
   font-size: 5rem; 
   line-height: 1.1;
-  color: #FBD612; 
+  color: var(--nav-brown); 
   transform: rotate(-2deg);
-  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  text-shadow: 2px 2px 0px var(--nav-mayo);
   margin: 0;
 }
-
-/* Optional: If you want a handwriting font for the title */
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 .font-handwriting {
   font-family: 'Permanent Marker', cursive;
@@ -284,24 +313,24 @@
   position: relative;
   padding: 6rem 0;
   /* Brand Red Background */
-  background-color: #4a0204; 
+  background-color: var(--nav-gold); 
   overflow: hidden;
   /* Top border to separate from white section */
-  border-top: 8px solid #FBD612; 
+  border-top: 8px solid var(--nav-red); 
 }
 
 /* Subtle Japanese Wave Pattern on Red */
 .franchise-bg-pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.05;
+  opacity: 0.10;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1zM1 5h2v2H1V5zm4 0h2v2H5V5zm4 0h2v2H9V5zM1 9h2v2H1V9zm4 0h2v2H5V9zm4 0h2v2H9V9z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 /* Highlight Box styling */
 .franchise-highlight-box {
   background: rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #FBD612;
+  border-left: 4px solid var(--nav-brown);
   padding: 1.5rem;
   border-radius: 0 1rem 1rem 0;
   margin-top: 1.5rem;
@@ -309,8 +338,8 @@
 
 /* --- TICKET BUTTON --- */
 .franchise-ticket-btn {
-  background-color: #FBD612;
-  color: #70080B;
+  background-color: var(--nav-brown);
+  color: var(--nav-mayo);
   border: none;
   padding: 1rem 2.5rem;
   font-size: 1.2rem;
@@ -322,7 +351,7 @@
   gap: 10px;
   transition: all 0.2s ease;
   box-shadow: 
-    0 4px 0 #d4b20a, /* 3D bottom lip */
+    0 4px 0 #241208, /* 3D bottom lip */
     0 10px 20px rgba(0,0,0,0.2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -331,7 +360,7 @@
 .franchise-ticket-btn:hover {
   transform: translateY(2px);
   box-shadow: 
-    0 2px 0 #d4b20a,
+    0 2px 0 #7b340b,
     0 5px 10px rgba(0,0,0,0.2);
 }
 

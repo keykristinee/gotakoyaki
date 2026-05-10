@@ -1,4 +1,3 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -20,6 +19,8 @@ import {
   Calendar
 } from 'lucide-react';
 import { useState } from 'react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+// @ts-ignore
 import '../styles/FranchisePage.css';
 
 export default function FranchisePage() {
@@ -49,7 +50,7 @@ export default function FranchisePage() {
     {
       number: '01',
       title: 'Choose a Franchise with a Proven System',
-      description: 'A clear, tested business model ensures your success.Go Takoyaki partners with Francorp to give you a reliable system and support.',
+      description: 'A clear, tested business model ensures your success. Go Takoyaki partners with Francorp to give you a reliable system and support.',
     },
     {
       number: '02',
@@ -75,32 +76,32 @@ export default function FranchisePage() {
 
   const benefits = [
     {
-      icon: <Award className="text-[#FBD612]" size={32} />,
+      icon: <Award className="text-[#FDBA19]" size={32} />,
       title: 'Proven Brand',
       description: 'Join a recognized brand with a loyal customer base and strong market presence.',
     },
     {
-      icon: <BookOpen className="text-[#FBD612]" size={32} />,
+      icon: <BookOpen className="text-[#FDBA19]" size={32} />,
       title: 'Comprehensive Training',
       description: 'Training covering operations, recipes, and business management.',
     },
     {
-      icon: <HeadphonesIcon className="text-[#FBD612]" size={32} />,
+      icon: <HeadphonesIcon className="text-[#FDBA19]" size={32} />,
       title: 'Ongoing Support',
       description: 'Dedicated support team available 24/7 to help you succeed.',
     },
     {
-      icon: <TrendingUp className="text-[#FBD612]" size={32} />,
+      icon: <TrendingUp className="text-[#FDBA19]" size={32} />,
       title: 'Marketing Assistance',
       description: 'Marketing campaigns to drive customers to your location.',
     },
     {
-      icon: <Users className="text-[#FBD612]" size={32} />,
+      icon: <Users className="text-[#FDBA19]" size={32} />,
       title: 'Exclusive Territory',
       description: 'Protected territory rights to ensure your market is your own.',
     },
     {
-      icon: <Target className="text-[#FBD612]" size={32} />,
+      icon: <Target className="text-[#FDBA19]" size={32} />,
       title: 'Site Selection Help',
       description: 'Expert guidance in choosing the optimal location for your franchise.',
     },
@@ -110,7 +111,7 @@ export default function FranchisePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-[#FFF8E7]">
       {/* Hero Section with background image */}
-      <section className="relative bg-gradient-to-br from-[#70080B] via-[#8a0a0e] to-[#70080B] text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#E01F27] via-[#8a0a0e] to-[#E01F27] text-white py-24 overflow-hidden">
         {/* Hero background image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <img
@@ -134,10 +135,7 @@ export default function FranchisePage() {
               of GoTakoyaki cheesebombs to your community.
             </p>
             <Button 
-              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-hero-primary mx-auto"
-            >
-              Start Your Journey
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })} className="btn-hero-primary mx-auto"> Start Your Journey
             </Button>
           </div>
         </div>
@@ -148,7 +146,7 @@ export default function FranchisePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="content-script-title">Why Choose GoTakoyaki?</h2>
-            <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+            <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Partner with a proven brand that provides everything you need to succeed
             </p>
@@ -158,12 +156,12 @@ export default function FranchisePage() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#FBD612]"
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all border-t-4 border-[#FDBA19]"
               >
-                <div className="bg-[#70080B] w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="franchise-icon">
                   {benefit.icon}
                 </div>
-                <h3 className="text-[#70080B] mb-3">{benefit.title}</h3>
+                <h3 className="franchise-details">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
@@ -217,7 +215,7 @@ export default function FranchisePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="content-script-title">5 Things You Should Know When You’re Franchising</h2>
-            <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+            <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               Our simple 5-step guide to get you from inquiry to opening day
             </p>
@@ -244,54 +242,54 @@ export default function FranchisePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="content-script-title">What We Provide</h2>
-              <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+              <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#70080B] p-2 rounded-full flex-shrink-0">
-                    <CheckCircle2 className="text-[#FBD612]" size={20} />
+                  <div className="bg-[#E01F27] p-2 rounded-full flex-shrink-0">
+                    <CheckCircle2 className="text-[#FDBA19]" size={20} />
                   </div>
                   <div>
-                    <h3 className="text-[#70080B] mb-1">Complete Training Program</h3>
+                    <h3 className="provide-title">Complete Training Program</h3>
                     <p className="text-gray-600">Hands on training at your location</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#70080B] p-2 rounded-full flex-shrink-0">
-                    <CheckCircle2 className="text-[#FBD612]" size={20} />
+                  <div className="bg-[#E01F27] p-2 rounded-full flex-shrink-0">
+                    <CheckCircle2 className="text-[#FDBA19]" size={20} />
                   </div>
                   <div>
-                    <h3 className="text-[#70080B] mb-1">Equipment & Supplies</h3>
+                    <h3 className="provide-title">Equipment & Supplies</h3>
                     <p className="text-gray-600">All specialized takoyaki equipment and initial supply inventory</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#70080B] p-2 rounded-full flex-shrink-0">
-                    <CheckCircle2 className="text-[#FBD612]" size={20} />
+                  <div className="bg-[#E01F27] p-2 rounded-full flex-shrink-0">
+                    <CheckCircle2 className="text-[#FDBA19]" size={20} />
                   </div>
                   <div>
-                    <h3 className="text-[#70080B] mb-1">Marketing Materials</h3>
+                    <h3 className="provide-title">Marketing Materials</h3>
                     <p className="text-gray-600">Branded signage, menus, promotional materials, and digital assets</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#70080B] p-2 rounded-full flex-shrink-0">
-                    <CheckCircle2 className="text-[#FBD612]" size={20} />
+                  <div className="bg-[#E01F27] p-2 rounded-full flex-shrink-0">
+                    <CheckCircle2 className="text-[#FDBA19]" size={20} />
                   </div>
                   <div>
-                    <h3 className="text-[#70080B] mb-1">Operations Manual</h3>
+                    <h3 className="provide-title">Operations Manual</h3>
                     <p className="text-gray-600">Comprehensive guide covering all aspects of running your franchise</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#70080B] p-2 rounded-full flex-shrink-0">
-                    <CheckCircle2 className="text-[#FBD612]" size={20} />
+                  <div className="bg-[#E01F27] p-2 rounded-full flex-shrink-0">
+                    <CheckCircle2 className="text-[#FDBA19]" size={20} />
                   </div>
                   <div>
-                    <h3 className="text-[#70080B] mb-1">Grand Opening Support</h3>
+                    <h3 className="provide-title">Grand Opening Support</h3>
                     <p className="text-gray-600">On-site assistance during your launch to ensure a successful start</p>
                   </div>
                 </div>
@@ -304,7 +302,7 @@ export default function FranchisePage() {
                 alt="Successful business team"
                 className="rounded-lg shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#FBD612] rounded-full blur-3xl opacity-30"></div>
+              <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-[#FDBA19] rounded-full blur-3xl opacity-30"></div>
             </div>
           </div>
         </div>
@@ -315,14 +313,14 @@ export default function FranchisePage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="content-script-title">Start Your Franchise Journey</h2>
-            <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+            <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
             <p className="text-gray-700 text-lg mb-8">
               Email us and our franchise development team will get back to you as soon as possible.
             </p>
             <div className="flex justify-center">
               <a
                 href="mailto:franchise.gotakoyaki@gmail.com"
-                className="inline-flex items-center gap-3 bg-[#70080B] text-white text-lg font-semibold px-8 py-4 rounded-md shadow hover:bg-[#8a0a0e] transition-all"
+                className="inline-flex items-center gap-3 bg-[#E01F27] text-white text-lg font-semibold px-8 py-4 rounded-md shadow hover:bg-[#8a0a0e] transition-all"
                 style={{ minWidth: '350px', justifyContent: 'center' }}
               >
                 <Mail className="mr-2" size={22} />

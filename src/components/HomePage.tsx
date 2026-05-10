@@ -1,7 +1,8 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ArrowRight, Flame, Heart, Clock, Quote, Star } from 'lucide-react';
 import { Button } from './ui/button';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 import PhotoBannerSlider from './PhotoBannerSlider';
+// @ts-ignore
 import '../styles/HomePage.css';
 
 interface HomePageProps {
@@ -61,10 +62,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <ImageWithFallback
                   src="/home_side.png"
                   alt="Delicious Takoyaki"
-                  className="rounded-lg shadow-2xl border-4 border-[#FBD612]"
+                  className="rounded-lg shadow-2xl border-4 border-[#FDBA19]"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-[#FBD612] rounded-full blur-3xl opacity-20"></div>
+              <div className="absolute -bottom-4 -right-4 w-64 h-64 bg-[#FDBA19] rounded-full blur-3xl opacity-20"></div>
             </div>
           </div>
         </div>
@@ -75,7 +76,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="feature-script-title">The Go Takoyaki Difference</h2>
-            <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+            <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               We bring you the authentic taste of Japanese street food with a commitment to quality and tradition.
             </p>
@@ -119,7 +120,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* PhotoBannerSlider */}
-      <div className="border-y-4 border-[#FBD612] bg-[#FFF8E7]">
+      <div className="border-y-4 border-[#FDBA19] bg-[#FFF8E7]">
         <PhotoBannerSlider />
       </div>
 
@@ -128,7 +129,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
              <h2 className="testimonials-script-title">Reviews</h2>
-             <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+             <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
              <p className="text-gray-500">What our happy customers are saying</p>
           </div>
           
@@ -138,8 +139,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <Quote className="testimonial-quote-icon" size={40} />
               <p className="testimonial-text">"It's my second time ordering from Go Takoyaki. Hassle-free and super delicious! It tastes authentic ❤️"</p>
               <div className="testimonial-author">
-                <div className="font-bold text-[#70080B]">Hana J.</div>
-                <div className="flex text-[#FBD612] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
+                <div className="font-bold text-[#E01F27]">Hana J.</div>
+                <div className="flex text-[#FDBA19] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
               </div>
             </div>
 
@@ -148,8 +149,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <Quote className="testimonial-quote-icon" size={40} />
               <p className="testimonial-text">"loved everything I ordered! ❤️ tried the baby octo and the ones w shrimp :)"</p>
               <div className="testimonial-author">
-                <div className="font-bold text-[#70080B]">Chengtu R.</div>
-                <div className="flex text-[#FBD612] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
+                <div className="font-bold text-[#E01F27]">Chengtu R.</div>
+                <div className="flex text-[#FDBA19] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
               </div>
             </div>
 
@@ -158,8 +159,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <Quote className="testimonial-quote-icon" size={40} />
               <p className="testimonial-text">"Tried their octobits variant and it's really good! It hada lot of bonito and floss. Transacting with them is also very easy and convenient. I'll order again!"</p>
               <div className="testimonial-author">
-                <div className="font-bold text-[#70080B]">Bea S.</div>
-                <div className="flex text-[#FBD612] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
+                <div className="font-bold text-[#E01F27]">Bea S.</div>
+                <div className="flex text-[#FDBA19] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
               </div>
             </div>
 
@@ -168,8 +169,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <Quote className="testimonial-quote-icon" size={40} />
               <p className="testimonial-text">"masarap po freshly cooked and kahit reheat 😋 fave ko po yung baby octopus, yung sister ko yung kani. will definitely order again 😁💗"</p>
               <div className="testimonial-author">
-                <div className="font-bold text-[#70080B]">Mary G.</div>
-                <div className="flex text-[#FBD612] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
+                <div className="font-bold text-[#E01F27]">Mary G.</div>
+                <div className="flex text-[#FDBA19] text-xs"><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/><Star fill="currentColor" size={14}/></div>
               </div>
             </div>
           </div>

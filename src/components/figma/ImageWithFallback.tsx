@@ -1,27 +1,32 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 
-const ERROR_IMG_SRC =
-  'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg=='
+type ImageWithFallbackProps = React.ImgHTMLAttributes<HTMLImageElement> & {
+  fallbackSrc?: string;
+};
 
-export function ImageWithFallback(props: React.ImgHTMLAttributes<HTMLImageElement>) {
-  const [didError, setDidError] = useState(false)
+const DEFAULT_FALLBACK_SRC =
+  'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22960%22 height=%22640%22 viewBox=%220 0 960 640%22%3E%3Crect width=%22960%22 height=%22640%22 fill=%22%23f5f5f5%22/%3E%3Cpath d=%22M180 440l150-150 110 110 90-90 250 250H180z%22 fill=%22%23d9d9d9%22/%3E%3Ccircle cx=%22310%22 cy=%22240%22 r=%2240%22 fill=%22%23d9d9d9%22/%3E%3C/svg%3E';
 
-  const handleError = () => {
-    setDidError(true)
-  }
+export function ImageWithFallback({
+  src,
+  alt,
+  fallbackSrc = DEFAULT_FALLBACK_SRC,
+  onError,
+  ...props
+}: ImageWithFallbackProps) {
+  const [currentSrc, setCurrentSrc] = useState(src);
 
-  const { src, alt, style, className, ...rest } = props
-
-  return didError ? (
-    <div
-      className={`inline-block bg-gray-100 text-center align-middle ${className ?? ''}`}
-      style={style}
-    >
-      <div className="flex items-center justify-center w-full h-full">
-        <img src={ERROR_IMG_SRC} alt="Error loading image" {...rest} data-original-url={src} />
-      </div>
-    </div>
-  ) : (
-    <img src={src} alt={alt} className={className} style={style} {...rest} onError={handleError} />
-  )
+  return (
+    <img
+      {...props}
+      src={currentSrc}
+      alt={alt}
+      onError={(event) => {
+        if (currentSrc !== fallbackSrc) {
+          setCurrentSrc(fallbackSrc);
+        }
+        onError?.(event);
+      }}
+    />
+  );
 }

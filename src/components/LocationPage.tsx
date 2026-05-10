@@ -1,5 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Clock, MapPin } from 'lucide-react';
+// @ts-ignore
 import '../styles/LocationPage.css';
 
 export default function LocationPage() {
@@ -13,7 +14,6 @@ export default function LocationPage() {
     { day: 'Sunday', hours: '11:00 AM - 9:00 PM' },
   ];
 
-  // Consolidate branch data here
   const branches = [
     { 
       status: 'Open', 
@@ -23,17 +23,11 @@ export default function LocationPage() {
     },
     { 
       status: 'Open', 
-      name: 'SM Center Las Pinas', 
-      address: 'Lower Ground Floor, Covered Walk', 
+      name: 'SM City North EDSA', 
+      address: 'Lower Ground Floor, Food Court', 
       type: 'new' 
     },
 
-    { 
-      status: 'Soon', 
-      name: 'SM Fairview', 
-      address: 'Opening Soon', 
-      type: 'upcoming' 
-    },
   ];
 
   return (
@@ -47,7 +41,7 @@ export default function LocationPage() {
              className="hero-blur"
            />
            {/* Gradient Overlay */}
-           <div className="absolute inset-0 bg-gradient-to-r from-[#70080B]/95 to-[#8a0a0e]/80"></div>
+           <div className="absolute inset-0 bg-gradient-to-r from-[#E01F27]/95 to-[#8a0a0e]/80"></div>
         </div>
         <div className="location-container">
           <div className="hero-content">
@@ -68,7 +62,6 @@ export default function LocationPage() {
             <div className="hours-inner">
               <div className="hours-badge">Opening Hours</div>
               <h2 className="content-script-title">When We're Open</h2>
-              <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
               <div className="hours-card">
                 <div className="hours-header">
                   <div className="hours-icon">
@@ -103,7 +96,6 @@ export default function LocationPage() {
             <div className="branches-side">
               <div className="branch-header" style={{marginTop: '2.5rem'}}>
                 <h2 className="content-script-title">Branches</h2>
-                <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
                 <p className="branch-text">Check out our locations bringing you fresh takoyaki cheesebombs to your community!</p>
               </div>
               

@@ -1,8 +1,16 @@
+:root {
+  --nav-red: #E01F27;
+  --nav-gold: #FDBA19;
+  --nav-brown: #502811;
+  --nav-white: #f4efe5;
+  --nav-mayo: #FBE498;
+}
+
 .hero-script-title {
   font-family: 'Avallon', cursive; 
   font-size: 6rem; 
   line-height: 1.1;
-  color: #FBD612; 
+  color: #FDBA19; 
   transform: rotate(-2deg);
   text-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
@@ -11,8 +19,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #FBD612;
-  color: #70080B;
+  background: var(--nav-mayo);
+  color: var(--nav-brown);
   padding: 0.5rem 1.2rem;
   border-radius: 12px;
   font-weight: 700;
@@ -37,9 +45,9 @@
   font-family: 'Avallon', cursive; /* The custom font you added */
   font-size: 5rem; 
   line-height: 1.1;
-  color: #70080B; 
+  color: var(--nav-brown); 
   transform: rotate(-2deg);
-  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  text-shadow: 2px 2px 0px rgba(253, 186, 25, 0.3);
   margin: 0;
 }
 
@@ -48,31 +56,32 @@
   background: #FFF8E7;
   padding: 5rem 0;
 }
-.franchise-title {
-  color: #70080B;
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
+
 .franchise-details {
-  color: #444;
-  text-align: center;
-  margin-bottom: 2rem;
+  color: var(--nav-brown);
+  font-weight: 600;
+  text-align: left;
 }
 
-/* =========================================
-   STATS BANNER REDESIGN (THIN VERSION)
-========================================= */
+.franchise-icon{
+  background-color: var(--nav-brown);
+  width: 4rem;        
+  height: 4rem;       
+  border-radius: 9999px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
 
 .stats-banner-section {
   position: relative;
-  /* Reduced padding to make it thinner */
   padding: 3rem 0; 
-  background-color: #70080B;
-  overflow: visible; /* Keeps the kiosk visible outside the box */
-  margin-top: 4rem; /* Added margin so the kiosk doesn't cover previous text */
-  border-top: 4px solid #FBD612;
-  border-bottom: 4px solid #FBD612;
+  background-color: var(--nav-brown);
+  overflow: visible;
+  margin-top: 4rem;
+  border-top: 4px solid var(--nav-gold);
+  border-bottom: 4px solid var(--nav-gold);
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
@@ -115,7 +124,7 @@
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
-  background: #FBD612;
+  background: #FDBA19;
   opacity: 0.25;
   filter: blur(60px);
   border-radius: 50%;
@@ -141,18 +150,18 @@
 }
 
 .stat-icon-wrapper {
-  color: #FBD612;
-  background: rgba(251, 214, 18, 0.1);
+  color: var(--nav-brown);
+  background: var(--nav-mayo);
   padding: 10px; /* Slightly smaller padding for thinner look */
   border-radius: 50%;
   margin-bottom: 0.5rem;
-  border: 1px solid rgba(251, 214, 18, 0.3);
+  border: 1px solid rgba(253, 186, 25, 0.3);
 }
 
 .stat-number {
   font-size: 3rem; /* Slightly smaller font to fit thinner banner */
   font-weight: 800;
-  color: #FBD612;
+  color: var(--nav-gold);
   line-height: 1;
   margin-bottom: 0.25rem;
   text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
@@ -202,8 +211,8 @@
 }
 
 .btn-hero-primary {
-  background: linear-gradient(135deg, #FBD612 0%, #dcb315 100%);
-  color: #70080B;
+  background: var(--nav-mayo);
+  color: var(--nav-brown);
   font-weight: 800;
   padding: 1rem 2.5rem;
   border-radius: 1rem; /* Soft square looks more modern than full pill */
@@ -214,7 +223,7 @@
   align-items: center;
   gap: 10px;
   box-shadow: 
-    0 4px 0 #bfa013, /* 3D Lip */
+    0 4px 0 #ae9e6a, /* 3D Lip */
     0 10px 20px rgba(0,0,0,0.3);
   transition: all 0.2s ease;
   justify-content: center;
@@ -231,7 +240,7 @@
 /* --- Step Card Styling --- */
 .step-card {
   position: relative;
-  background: #fff;
+  background: #FFFF;
   padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -251,8 +260,8 @@
   transform: translateX(-50%);
   width: 3rem;
   height: 3rem;
-  background-color: #FBD612;
-  color: #70080B;
+  background-color: var(--nav-brown);
+  color: var(--nav-mayo);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -263,7 +272,7 @@
 }
 
 .step-title {
-  color: #70080B;
+  color: var(--nav-gold);
   font-weight: 700;
   font-size: 1.25rem;
   margin-top: 1rem;
@@ -271,8 +280,13 @@
 }
 
 .step-desc {
-  color: #4b5563;
+  color: var(--nav-brown);
   line-height: 1.5;
+}
+
+.provide-title{
+  color: var(--nav-brown);
+  margin-bottom: 2px;
 }
 
 /* --- Desktop Adjustments (min-width: 768px) --- */

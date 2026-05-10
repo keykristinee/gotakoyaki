@@ -12,7 +12,7 @@
 .hero-overlay { 
   position: absolute; 
   inset: 0; 
-  background: rgba(112, 8, 11, 0.6); 
+  background: rgba(224, 31, 39, 0.6); 
   mix-blend-mode: multiply; 
 }
 
@@ -20,8 +20,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #70080B;
-  color: #FBD612;
+  background: #FDBA19;
+  color: #E01F27;
   padding: 0.5rem 1.2rem;
   border-radius: 12px;
   font-weight: 700;
@@ -50,7 +50,7 @@
 
 /* 3. Highlighted Text Effect */
 .text-highlight-gold {
-  color: #FBD612;
+  color: #FDBA19;
   position: relative;
   display: inline-block;
 }
@@ -60,7 +60,7 @@
   font-weight: 400;
   font-size: 5rem;
   line-height: 1.1;
-  color: #FBD612;
+  color: #FDBA19;
   position: relative;
   display: inline-block;
 }
@@ -73,7 +73,7 @@
   left: 0;
   width: 100%;
   height: 10px;
-  background: rgba(112, 8, 11, 0.6); /* Dark Red Marker */
+  background: rgba(224, 31, 39, 0.6); /* Dark Red Marker */
   z-index: -1;
   transform: skewX(-10deg) rotate(-1deg);
 }
@@ -99,8 +99,8 @@
 
 /* Primary Button (Gold Gradient) */
 .btn-hero-primary {
-  background: linear-gradient(135deg, #FBD612 0%, #dcb315 100%);
-  color: #70080B;
+  background: linear-gradient(135deg, #E01F27 0%, #dcb315 100%);
+  color: #FDBA19;
   font-weight: 800;
   padding: 1rem 2.5rem;
   border-radius: 1rem; /* Soft square looks more modern than full pill */
@@ -153,9 +153,9 @@
   font-family: 'Avallon', cursive; /* The custom font you added */
   font-size: 5rem; 
   line-height: 1.1;
-  color: #70080B; 
+  color: #502811; 
   transform: rotate(-2deg);
-  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  text-shadow: 2px 2px 0px rgba(253, 186, 25, 0.3);
   margin: 0;
 }
 
@@ -173,8 +173,8 @@
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(112, 8, 11, 0.1);
-  border-color: rgba(112, 8, 11, 0.1);
+  box-shadow: 0 20px 40px rgba(224, 31, 39, 0.1);
+  border-color: rgba(224, 31, 39, 0.1);
 }
 
 /* Top Border Accent */
@@ -183,7 +183,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 6px;
-  background: #FBD612;
+  background: #FDBA19;
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: center;
@@ -196,21 +196,21 @@
 .feature-icon-wrapper {
   width: 80px;
   height: 80px;
-  background-color: #70080B;
+  background-color: #E01F27;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem auto;
-  box-shadow: 0 10px 20px rgba(112, 8, 11, 0.2);
+  box-shadow: 0 10px 20px rgba(224, 31, 39, 0.2);
   border: 4px solid #fff;
-  outline: 2px solid #FBD612;
+  outline: 2px solid #FDBA19;
 }
 
 .feature-title {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #70080B;
+  color: #E01F27;
   margin-bottom: 1rem;
 }
 
@@ -272,8 +272,8 @@
 }
 
 .photo-banner-dot.active {
-  background: #FBD612;
-  border-color: #FBD612;
+  background: #FDBA19;
+  border-color: #FDBA19;
   transform: scale(1.2); /* Slight pop when active */
 }
 
@@ -284,9 +284,9 @@
   font-family: 'Avallon', cursive; /* The custom font you added */
   font-size: 5rem; 
   line-height: 1.1;
-  color: #70080B; 
+  color: #502811; 
   transform: rotate(-2deg);
-  text-shadow: 2px 2px 0px rgba(251, 214, 18, 0.3);
+  text-shadow: 2px 2px 0px rgba(253, 186, 25, 0.3);
   margin: 0;
 }
 
@@ -311,7 +311,7 @@
 
 .testimonial-bubble:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(112, 8, 11, 0.1);
+  box-shadow: 0 10px 25px rgba(224, 31, 39, 0.1);
 }
 
 /* Speech bubble tail */
@@ -329,7 +329,7 @@
 }
 
 .testimonial-quote-icon {
-  color: #FBD612;
+  color: #FDBA19;
   opacity: 0.3;
   margin-bottom: 1rem;
 }

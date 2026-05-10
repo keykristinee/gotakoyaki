@@ -16,13 +16,13 @@ const TikTokIcon = ({ size = 24 }: { size?: number }) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#70080B] text-white">
+    <footer className="footer-section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-[#FBD612]">GoTakoyaki</span>
+              <span className="text-[#FDBA19]">GoTakoyaki</span>
             </div>
             <p className="text-white/80">
               Authentic Japanese takoyaki made fresh daily with premium ingredients and traditional recipes.
@@ -31,18 +31,18 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-[#FBD612] mb-4">Contact Us</h3>
+            <h3 className="text-[#FDBA19] mb-4">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <MapPin size={18} className="text-[#FBD612]" />
-                <span className="text-white/80">Henry's Building, 80 Ortigas Ave, San Juan City, 1502 Metro Manila</span>
+                <MapPin size={40} className="text-[#FDBA19]" />
+                <span className="text-white/80">Viridian in Greenhills, Conneticut st. corner Missouri St., Greenhills, San Juan City, 1500 Metro Manila</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone size={18} className="text-[#FBD612]" />
+                <Phone size={18} className="text-[#FDBA19]" />
                 <span className="text-white/80">0961-595-9864</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail size={18} className="text-[#FBD612]" />
+                <Mail size={18} className="text-[#FDBA19]" />
                 <span className="text-white/80">franchise.gotakoyaki@gmail.com</span>
               </div>
             </div>
@@ -50,26 +50,26 @@ export default function Footer() {
 
           {/* Hours & Social */}
           <div>
-            <h3 className="text-[#FBD612] mb-4">Hours</h3>
+            <h3 className="text-[#FDBA19] mb-4">Hours</h3>
             <div className="space-y-2 mb-6">
               <p className="text-white/80">Monday - Friday: 11am - 10pm</p>
               <p className="text-white/80">Saturday - Sunday: 11am - 9pm</p>
             </div>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/GoTakoyaki/" className="text-[#FBD612] hover:text-white transition-colors">
+              <a href="https://www.facebook.com/GoTakoyaki/" className="text-[#FDBA19] hover:text-white transition-colors">
                 <Facebook size={20} />
               </a>
-              <a href="https://www.instagram.com/go_takoyaki/" className="text-[#FBD612] hover:text-white transition-colors">
+              <a href="https://www.instagram.com/go_takoyaki/" className="text-[#FDBA19] hover:text-white transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://www.tiktok.com/@gotakoyaki" className="text-[#FBD612] hover:text-white transition-colors">
+              <a href="https://www.tiktok.com/@gotakoyaki" className="text-[#FDBA19] hover:text-white transition-colors">
                 <TikTokIcon size={20} />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-[#FBD612]/20 mt-8 pt-8 text-center text-white/60">
+        <div className="border-t border-[#FDBA19]/20 mt-8 pt-8 text-center text-white/60">
           <p>&copy; 2020 GoTakoyaki. All rights reserved.</p>
         </div>
       </div>

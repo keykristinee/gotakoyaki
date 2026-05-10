@@ -1,5 +1,6 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Award, Users, Sparkles, Target, UtensilsCrossed, Flame, ChefHat } from 'lucide-react';
+import { ImageWithFallback } from './figma/ImageWithFallback';
+// @ts-ignore
 import '../styles/AboutPage.css';
 
 interface AboutPageProps {
@@ -124,7 +125,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="values-special-font">Our Values</h2>
-            <div className="h-1.5 w-24 bg-[#FBD612] mx-auto rounded-full mb-6"></div>
+            <div className="h-1.5 w-24 bg-[#FDBA19] mx-auto rounded-full mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto text-lg">
               What drives us every day to create the perfect takoyaki experience
             </p>
@@ -132,34 +133,34 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center p-6">
-              <div className="bg-[#FBD612] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Award className="text-[#70080B]" size={36} strokeWidth={2.5} />
+              <div className="bg-[#FDBA19] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Award className="text-[#E01F27]" size={36} strokeWidth={2.5} />
               </div>
-              <h3 className="text-[#70080B] text-xl font-bold mb-3">Quality First</h3>
+              <h3 className="values-title">Quality First</h3>
               <p className="text-gray-600">We never compromise on ingredients or preparation methods.</p>
             </div>
 
             <div className="text-center p-6">
-              <div className="bg-[#FBD612] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Users className="text-[#70080B]" size={36} strokeWidth={2.5} />
+              <div className="bg-[#FDBA19] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Users className="text-[#E01F27]" size={36} strokeWidth={2.5} />
               </div>
-              <h3 className="text-[#70080B] text-xl font-bold mb-3">Community</h3>
+              <h3 className="values-title">Community</h3>
               <p className="text-gray-600">Building connections through shared love of great food.</p>
             </div>
 
             <div className="text-center p-6">
-              <div className="bg-[#FBD612] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Sparkles className="text-[#70080B]" size={36} strokeWidth={2.5} />
+              <div className="bg-[#FDBA19] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Sparkles className="text-[#E01F27]" size={36} strokeWidth={2.5} />
               </div>
-              <h3 className="text-[#70080B] text-xl font-bold mb-3">Authenticity</h3>
+              <h3 className="values-title">Authenticity</h3>
               <p className="text-gray-600">Staying true to traditional Japanese recipes and techniques.</p>
             </div>
 
             <div className="text-center p-6">
-              <div className="bg-[#FBD612] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Target className="text-[#70080B]" size={36} strokeWidth={2.5} />
+              <div className="bg-[#FDBA19] w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <Target className="text-[#E01F27]" size={36} strokeWidth={2.5} />
               </div>
-              <h3 className="text-[#70080B] text-xl font-bold mb-3">Excellence</h3>
+              <h3 className="values-title">Excellence</h3>
               <p className="text-gray-600">Striving for perfection in every single ball we make.</p>
             </div>
           </div>
@@ -178,11 +179,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 Now We're <span className="franchising-special-font">Franchising!</span>
               </h2>
               
-              <div className="h-1.5 w-24 bg-[#FBD612] rounded-full mb-6"></div>
+              <div className="h-1.5 w-24 bg-[#FDBA19] rounded-full mb-6"></div>
 
               <div className="text-white/90 space-y-5 text-lg font-light leading-relaxed">
                 <p>
-                  <strong>We’re not stopping there.</strong> Over the past year, we’ve worked closely with <span className="text-[#FBD612] font-bold">Francorp</span>, one of the leading franchise consultants, to build a solid foundation for aspiring entrepreneurs like you. We’ve invested time and resources into refining our operations, ensuring that the <strong>Go Takoyaki</strong> system you inherit is efficient, profitable, and authentic.
+                  <strong>We’re not stopping there.</strong> Over the past year, we’ve worked closely with <strong>Francorp</strong>, one of the leading franchise consultants, to build a solid foundation for aspiring entrepreneurs like you. We’ve invested time and resources into refining our operations, ensuring that the <strong>Go Takoyaki</strong> system you inherit is efficient, profitable, and authentic.
                 </p>
                 
                 {/* Highlight Box */}

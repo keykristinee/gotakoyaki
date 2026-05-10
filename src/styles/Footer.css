@@ -1,8 +1,7 @@
 /* Footer specific styles */
 .footer-section {
-  background: #70080B;
+  background: #502811;
   color: #fff;
-  padding: 3rem 0;
 }
 .footer-brand {
   display: flex;
@@ -14,13 +13,13 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: #FBD612;
+  background: #FDBA19;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .footer-brand-text {
-  color: #FBD612;
+  color: #FDBA19;
   font-weight: bold;
 }
 .footer-contact {

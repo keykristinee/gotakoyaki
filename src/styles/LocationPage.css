@@ -1,7 +1,15 @@
+:root {
+  --nav-red: #E01F27;
+  --nav-gold: #FDBA19;
+  --nav-brown: #502811;
+  --nav-white: #f4efe5;
+  --nav-mayo: #FBE498;
+}
+
 .location-hero {
   position: relative;
   background: 
-    linear-gradient(to right, rgba(112, 8, 11, 0.9), rgba(138, 10, 14, 0.8)),
+    linear-gradient(to right, rgba(224, 31, 39, 0.9), rgba(138, 10, 14, 0.8)),
     url('/location_bg.png');
   background-size: cover;
   background-position: center;
@@ -22,19 +30,19 @@
   font-family: 'Avallon', cursive; 
   font-size: 6rem; 
   line-height: 1.1;
-  color: #FBD612; 
+  color: #FDBA19; 
   transform: rotate(-2deg);
   text-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-.content-script-title {
+.location-page .content-script-title {
   font-family: 'Avallon', cursive; 
   font-size: 4rem; 
   line-height: 1.1;
-  color: #70080b; 
+  color: var(--nav-brown); 
   transform: rotate(-2deg);
-  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
   text-align: center;
+  padding-bottom: 5%;
 }
 
 /* Side-by-side layout for hours and branches */
@@ -62,16 +70,11 @@
     min-width: 0;
   }
 }
-/* Branch sections */
+
 /* --- Branch Sections --- */
 .branch-header {
   text-align: center;
   margin-bottom: 2.5rem;
-}
-.branch-title {
-  font-size: 2.5rem; /* Matched size to Hours title */
-  color: #70080b;
-  margin-bottom: 0.5rem;
 }
 .branch-text {
   color: #4b5563;
@@ -93,21 +96,20 @@
   box-shadow: 0 8px 32px -8px rgba(0,0,0,0.12);
   padding: 2rem;
   width: 100%;
-  border-top: 4px solid #fbd612;
+  border-top: 4px solid #fdba19;
   
-  /* FLEXBOX to push content evenly */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  height: 100%; /* Forces it to fill the grid cell height */
-  min-height: 140px; /* Ensures a minimum visual size */
+  justify-content: center;
+  height: 100%;
+  min-height: 140px;
 }
 
 .branch-card--new {
   border-top-color: #4caf50;
 }
 .branch-card--upcoming {
-  border-top-color: #fbd612;
+  border-top-color: #fdba19;
 }
 
 .branch-card-header {
@@ -129,8 +131,8 @@
   text-align: center;
 }
 .branch-badge--new {
-  background: #e6f4ea; /* Softer green bg */
-  color: #1e7e34;
+  background: green; /* Softer green bg */
+  color: var(--nav-mayo);
 }
 .branch-badge--upcoming {
   background: #fff8e1; /* Softer yellow bg */
@@ -139,7 +141,7 @@
 
 .branch-location {
   font-size: 1.1rem;
-  color: #70080b;
+  color: var(--nav-brown);
   font-weight: 700;
 }
 
@@ -164,7 +166,7 @@
 
 /* Hero */
 .location-hero {
-  background: linear-gradient(to right, #70080b, #8a0a0e);
+  background: linear-gradient(to right, #e01f27, #8a0a0e);
   color: #ffffff;
   padding: 5rem 0;
 }
@@ -199,20 +201,12 @@
 
 .hours-badge {
   display: inline-block;
-  background-color: #fbd612;
-  color: #70080b;
+  background-color: var(--nav-brown);
+  color: var(--nav-mayo);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   margin-bottom: 1.5rem;
   font-weight: 800;
-}
-
-.hours-title {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #70080b;
-  width: 100%;
 }
 
 .hours-card {
@@ -222,7 +216,7 @@
   border-radius: 0.75rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   padding: 2rem;
-  border-top: 4px solid #fbd612;
+  border-top: 4px solid #fdba19;
 }
 
 .hours-header {
@@ -234,15 +228,15 @@
 }
 
 .hours-icon {
-  background-color: #70080b;
+  background-color: var(--nav-brown);
   border-radius: 9999px;
   padding: 0.5rem;
-  color: #fbd612;
+  color: var(--nav-mayo);
   display: inline-flex;
 }
 
 .hours-text {
-  color: #4b5563;
+  color: var(--nav-brown);
 }
 
 .hours-list {
@@ -259,15 +253,9 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
-.hours-item--weekend {
-  background-color: #fff8e7;
-  margin: 0 -1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-}
-
 .hours-item-day {
-  color: #70080b;
+  color: var(--nav-brown);
+  font-weight: 550;
 }
 
 .hours-item-hours {
@@ -277,14 +265,14 @@
 .hours-note {
   margin-top: 1.5rem;
   padding: 1rem;
-  background-color: #fff8e7;
+  background-color: var(--nav-mayo);
   border-radius: 0.75rem;
   font-size: 0.875rem;
-  color: #374151;
+  color: var(--nav-brown);
 }
 
 .hours-note span {
-  color: #70080b;
+  color: #e01f27;
   font-weight: 600;
 }
 
